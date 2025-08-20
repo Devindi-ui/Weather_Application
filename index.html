@@ -33,6 +33,85 @@
         </div>
      </div>
 
+     <!-- Main app container -->
+      <div class="app-container">
+        <header class="app-header">
+            <div class="logo">Varsha | Weather Dashboard</div>
+            <nav class="nav-links">
+                <button id="toggle-unit">°C / °F</button>
+                <button id="auth-btn">Sign in</button>
+                <button id="logout-btn" style="display: none;">Logout</button>
+            </nav>
+        </header>
+
+        <!-- main content -->
+         <main class="main-content">
+            <!-- search section -->
+             <section class="search-section">
+                    <div class="search-container">
+                        <input type="text" id="location-input" placeholder="Search">
+                        <button id="search-btn">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                    <div class="saved-locations" id="saved-locations">
+                        <!-- saved locations will be appear here -->
+                    </div>
+             </section>
+
+             <!-- current weather section -->
+              <section class="current-weather">
+                <div class="weather-card">
+                    <div class="weather-main">
+                        <div class="location-info">
+                            <h1 id="current-city">Kandy</h1>
+                            <p id="current-date">2025-08-20</p>
+                        </div>
+                        <div class="weather-icon-container">
+                            <img src="" alt="Weather-Icon" id="current-weather-icon">
+                            <p id="current-weather-desc"></p>
+                        </div>
+                        <div class="weather-temp">
+                            <h2 id="current-temp">30C</h2>
+                            <div class="temp-range">
+                                <span id="current-temp-max">H: 32C</span>
+                                <span id="current-temp-min">L: 28C</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="weather-details">
+                        <div class="detail-item">
+                            <i class="fas fa-wind"></i>
+                            <span id="current-wind">30</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-tint"></i>
+                            <span id="current-humidity">80%</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-sun"></i>
+                            <span id="current-uv">30</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-rain"></i>
+                            <span id="current-precipitation">10%</span>
+                        </div>
+                    </div>
+                </div>
+              </section>
+
+              <!-- forecast section -->
+               <section class="forecast-section">
+                <h2> Days Forecast</h2>
+                <div class="forecast-container" id="forecast-container">
+                    
+                </div>
+               </section>
+         </main>
+      </div>
+
+
+
     <!-- firebase sdk -->
     <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-auth-compat.js"></script>
