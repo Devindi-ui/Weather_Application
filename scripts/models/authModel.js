@@ -19,7 +19,7 @@ class AuthModel {
   }
 
   login(email, password){
-    return this.auth.signInWithEmailPassword(email, password);
+    return this.auth.signInWithEmailAndPassword(email, password);
   }
 
   logout(){
