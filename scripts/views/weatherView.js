@@ -9,7 +9,7 @@ class WeatherView{
         this.currentCity = document.getElementById('current-city');
         this.currentDate = document.getElementById('current-date');
         this.currentWeatherIcon = document.getElementById('current-weather-icon');
-        this.currentWeatherDesc = document.getElementById('current-desc');
+        this.currentWeatherDesc = document.getElementById('current-weather-desc');
         this.currentTemp = document.getElementById('current-temp');
         this.currentTempMax = document.getElementById('current-temp-max');
         this.currentTempMin = document.getElementById('current-temp-min');
@@ -20,7 +20,7 @@ class WeatherView{
 
         this.forecastContainer = document.getElementById('forecast-container');
 
-        this.currentUnit = metric;
+        this.currentUnit = 'metric';
     }
 
     displayCurrentWeather(data){
@@ -54,6 +54,7 @@ class WeatherView{
     displayForecast(data){
         //clear previous 
         this.forecastContainer.innerHTML = {};
+        const dailyForecast = {};
 
         data.list.forEach(item => {
             const date = new Date(item.dt * 1000).toLocaleDateString();
@@ -94,7 +95,7 @@ class WeatherView{
                 </div>
             `;
 
-            this.forecastContainer.appanchd(forecastCard);
+            this.forecastContainer.appendChild(forecastCard);
             dayCount++;
         }
     }

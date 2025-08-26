@@ -25,9 +25,11 @@ const authView = new AuthView();
 const weatherView = new WeatherView();
 
 const authController = new AuthController(authModal, authView);
+const weatherController = new WeatherController(weatherModal, weatherView, storageModal)
 
 document.addEventListener('DOMContentLoaded', () => {
     authController.init();
+    weatherController.init();
 
     //chech auth state 
     auth.onAuthStateChanged((user) => {
